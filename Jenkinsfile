@@ -2,9 +2,7 @@ pipeline {
     environment {
     registry = "9971rahulsingh/dockerdemo"
     registryCredential = 'DOCKER_HUB_PASSWORD'
-    dockerImage = '9971rahulsingh/dockerdemo:java'
-    githubUrl = "github_url"
-
+    dockerImage = '9971rahulsingh/dockerdemo'
     }
 
     agent any
@@ -51,4 +49,4 @@ pipeline {
                     }
                 }
            }
-       }
+}
