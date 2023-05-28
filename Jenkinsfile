@@ -1,8 +1,8 @@
 pipeline {
     environment {
-    registry = "dkjahuwqkjsahiasuqwnksajhi/qunote"
+    registry = "9971rahulsingh/dockerdemo"
     registryCredential = 'DOCKER_HUB_PASSWORD'
-    dockerImage = 'dkjahuwqkjsahiasuqwnksajhi/java:backend'
+    dockerImage = '9971rahulsingh/dockerdemo:java'
     githubUrl = "github_url"
 
     }
@@ -49,7 +49,7 @@ pipeline {
                         //sshagent(['server']) {
                             //sh "docker stop qunote"
                             //sh "docker rm qunote"
-                            sh "docker run -d -p 8091:8091 --name java  javademo/java:${env.BUILD_NUMBER}"
+                            sh "docker run -d -p 8091:8091 --name java  9971rahulsingh/dockerdemo:${env.BUILD_NUMBER}"
                         }
                     }
                 }
