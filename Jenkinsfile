@@ -46,10 +46,7 @@ pipeline {
            stage('Run docker image as container') {
                 steps {
                     script {
-                        //sshagent(['server']) {
-                            //sh "docker stop qunote"
-                            //sh "docker rm qunote"
-                            sh "docker run -d -p 8091:8091 --name java 9971rahulsingh/dockerdemo:${env.BUILD_NUMBER}"
+                         sh "docker run -d -p 8091:8091 --name java 9971rahulsingh/dockerdemo:${env.BUILD_NUMBER}"
                         }
                     }
                 }
