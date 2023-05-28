@@ -44,7 +44,7 @@ pipeline {
            stage('Run docker image as container') {
                 steps {
                     script {
-                         sh "docker run -d -p 8091:8091 --name java 9971rahulsingh/dockerdemo:${env.BUILD_NUMBER}"
+                         sh "docker run -d -p 8091:8091 --name java 9971rahulsingh/dockerdemo:10"
                         }
                     }
                 }
