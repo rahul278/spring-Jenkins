@@ -11,7 +11,7 @@ pipeline {
     stages {
             stage('Cloning our Git') {
                 steps {
-                git branch: 'development1', credentialsId: 'github_cred', url: 'github_url'
+                git credentialsId: 'github_cred', url: 'github_url'
                 }
             }
 
